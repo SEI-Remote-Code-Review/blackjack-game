@@ -4,18 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <script defer src="./js/app.js"></script>
   <link rel="./css/cardstarter.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <title>Blackjack Game</title>
 </head>
 <body>
-  <div class="container">
-          <div class="card d05 large shadow"></div>
-          <div class="card large shadow"></div>
-          <div class="card large outline"></div>
-          <div class="card large back-red"></div>
-    </div>
+  <h1>Blackjack Game</h1>
+  <h2 class="game-status" id="msg">Message</h2>
+  
+  <div class="dealersInfo">
+    <p id="dealer-hand"></p>
+    <p id="dealer-value"></p>
+  </div>
+
+  <div class="playersInfo">
+    <p id="player-hand"></p>
+    <p id="player-value"></p>
+  </div>
+
   <button id="playbtn" class="btn">Play</button>
   <button id="hitbtn" class="btn">Hit</button>
   <button id="standbtn" class="btn">Stand</button>
