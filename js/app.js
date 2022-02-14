@@ -21,9 +21,9 @@ const standbtn = document.getElementById('stand-btn')
 const statusMsg = document.querySelector('.game-status')
 
 /*----------------------------- Event Listeners -----------------------------*/
-playbtn.addEventListener('click', playGame)
-hitbtn.addEventListener('click', hitFunc)
-standbtn.addEventListener('click', standFunc)
+// playbtn.addEventListener('click', playGame)
+// hitbtn.addEventListener('click', hitFunc)
+// standbtn.addEventListener('click', standFunc)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -35,10 +35,19 @@ function init() {
 }
 console.log(cardDeck)
 
-function playGame() {
-  if (cardDeck.length > 0) {
-    let randIdx = Math.floor(Math.random() * cardDeck.length)
+// function playGame() {
+  
 
 
+
+//   }
+
+
+function shuffleCards(arr){
+  for(var i =arr.length-1 ; i>0 ;i--){
+      var j = Math.floor( Math.random() * (i + 1) );
+      [arr[i],arr[j]]=[arr[j],arr[i]]; 
   }
 }
+shuffleCards(cardDeck)
+console.log(cardDeck)
