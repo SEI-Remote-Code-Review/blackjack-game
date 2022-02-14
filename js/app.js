@@ -35,12 +35,12 @@ function init() {
 }
 console.log(cardDeck)
 
-// function playGame() {
-  
+function playGame() {
+  shuffleCards(cardDeck)
+  dealCards()
+}
 
 
-
-//   }
 
 
 function shuffleCards(arr){
@@ -49,5 +49,9 @@ function shuffleCards(arr){
       [arr[i],arr[j]]=[arr[j],arr[i]]; 
   }
 }
-shuffleCards(cardDeck)
-console.log(cardDeck)
+
+function dealCards() {
+  playerHand = [cardDeck.shift(), cardDeck.shift()]
+  dealerHand = [cardDeck.shift(), cardDeck.shift()]
+}
+
