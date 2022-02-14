@@ -22,7 +22,8 @@ const statusMsg = document.querySelector('.game-status')
 
 /*----------------------------- Event Listeners -----------------------------*/
 playbtn.addEventListener('click', playGame)
-hitbtn.addEventListener('click, htiFunc')
+hitbtn.addEventListener('click', hitFunc)
+standbtn.addEventListener('click', standFunc)
 
 
 /*-------------------------------- Functions --------------------------------*/
