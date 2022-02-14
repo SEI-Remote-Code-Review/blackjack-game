@@ -9,6 +9,8 @@ let dealerHandValue = 0
 let playerTurn = null
 let gameWinner = null 
 
+
+
 /*------------------------ Cached Element References ------------------------*/
 
 const playerHandEl = document.getElementById('player-hand')
@@ -53,5 +55,53 @@ function shuffleCards(arr){
 function dealCards() {
   playerHand = [cardDeck.shift(), cardDeck.shift()]
   dealerHand = [cardDeck.shift(), cardDeck.shift()]
+}
+
+
+let ace = ["dA", "hA", "cA", "sA"]
+let pictureCard = ["dK", "dQ", "dJ", "d10", "hK", "hQ", "hJ", "h10", "cK", "cQ", "cJ", "c10", "sK", "sQ", "sJ", "s10" ]
+let nineSuits = ["d09", "h09", "c09", "s09"]
+let eightSuits = ["d08", "h08", "c08", "s08"]
+let sevenSuits = ["d07", "h07", "c07", "s08"]
+let sixSuits = ["d06", "h06", "c06", "s06"]
+let fiveSuits = ["d05", "h05", "c05", "s05"]
+let fourSuits = ["d04", "h04", "c04", "s04"]
+let threeSuits = ["d03", "h03", "c03", "s03"]
+let twoSuits = ["d02", "h02", "c02", "s02"]
+
+function cardValues(card) {
+  let value
+  
+  if (card = 'ace') {
+    value = 1 ?? 11
+  }
+  if (card = 'pictureCard') {
+    value = 10
+  }
+  if (card = 'nineSuits') {
+    value = 9
+  }
+  if (card = 'eightSuits') {
+    value = 8
+  }
+  if (card = 'sevenSuits') {
+    value = 7
+  }
+  if (card = 'sixSuits') {
+    value = 6
+  }
+  if (card = 'fiveSuits') {
+    value = 5
+  }
+  if (card = 'fourSuits') {
+    value = 4
+  }
+  if (card = 'threeSuits') {
+    value = 3
+  }
+  if (card = 'twoSuits') {
+    value = 2
+  }
+
 }
 
