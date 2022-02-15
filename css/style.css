@@ -1,5 +1,5 @@
 body {
-  background-color: #179748;
+  background-color: #137538;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@ body {
 .btn {
   margin-top: 2vh;
   color: white;
-  background-color: #202d7a;
+  background-color: #ca2828;
   font-weight: bold;
-  border: 2px solid #202d7a;
+  border: 2px solid #ca2828;
 }
