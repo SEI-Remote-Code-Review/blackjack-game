@@ -102,6 +102,10 @@ function cardValues(card) {
   if (card = 'twoSuits') {
     value = 2
   }
+  return value 
+}
+
+function countHands(handTotal) {
 
 }
 
