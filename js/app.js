@@ -107,13 +107,15 @@ function cardValues(card) {
   return value 
 }
 
-// function countHands(hand) {
-//   let handTotal = 0
+function countHands(hand) {
+  let handTotal = 0
 
-//   for (let i = 0; i< hand.length; i++)
+  for (let i = 0; i< hand.length; i++) {
+    return 
+  }
 
 
-// }
+}
 
 
 function hit() {
