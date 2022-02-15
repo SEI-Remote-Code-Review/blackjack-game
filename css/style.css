@@ -1,23 +1,36 @@
 body {
-  background-color:rgb(28, 119, 19);
-/* Use a system font, if none are available use an available sans-sarif   font */
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-margin: 0;
-height: 100vh;
-display: flex;
-flex-direction: column;
+  background-color: #179748;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vmax;
 }
 
-h1 {
-color:black;
-text-align: center;
-font-size: 44px;
-margin: auto;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-h2 {
-color:black;
-text-align: center;
-font-size: 18px;
+.card {
+  margin: 3vh;
+}
+
+.card.outline {
+  border: 0.15em dashed #202d7a;
+}
+
+.card.shadow {
+  box-shadow: 7px 7px 7px 0 rgba(41, 41, 41, 0.95) !important;
+}
+
+.btn {
+  margin-top: 2vh;
+  color: white;
+  background-color: #202d7a;
+  font-weight: bold;
+  border: 2px solid #202d7a;
 }

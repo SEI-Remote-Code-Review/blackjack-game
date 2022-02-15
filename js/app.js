@@ -23,7 +23,7 @@ const standbtn = document.getElementById('stand-btn')
 const statusMsg = document.querySelector('.game-status')
 
 /*----------------------------- Event Listeners -----------------------------*/
-// playbtn.addEventListener('click', playGame)
+playbtn.addEventListener('click', playGame)
 // hitbtn.addEventListener('click', hitFunc)
 // standbtn.addEventListener('click', standFunc)
 
@@ -105,7 +105,11 @@ function cardValues(card) {
   return value 
 }
 
-function countHands(handTotal) {
+// function countHands(hand) {
+//   let handTotal = 0
 
-}
+//   for (let i = 0; i< hand.length; i++)
+
+
+// }
 
