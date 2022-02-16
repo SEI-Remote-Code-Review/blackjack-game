@@ -4,8 +4,6 @@
 let cardDeck = []
 let playerHand = []
 let dealerHand = []
-let playerHandValue = 0
-let dealerHandValue = 0
 let playerTurn = null
 let gameWinner = null 
 
@@ -40,11 +38,9 @@ function init() {
 function playGame() {
   shuffleCards(cardDeck)
   dealCards()
+  countHands(playerHand)
+  countHands(dealerHand)
 }
-
-
-
-
 
 
 function shuffleCards(arr){
@@ -116,14 +112,19 @@ function countHands(hand) {
   let handTotal = 0
 
   for (let i = 0; i< hand.length; i++) {
-    return 
-  }
+    handTotal = handTotal + cardValues(hand[i])
+}
+console.log(handTotal)
+return handTotal
 
 
 }
 
 
 function hit() {
+  playerHand.push(cardDeck.pop())
+  console.log(playerHand)
+  countHands(playerHand)
 
 }
 
