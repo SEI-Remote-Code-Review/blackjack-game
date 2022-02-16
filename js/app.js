@@ -4,7 +4,6 @@
 let cardDeck = []
 let playerHand = []
 let dealerHand = []
-let playerTurn = null
 let gameWinner = null 
 
 
@@ -116,18 +115,23 @@ function countHands(hand) {
 }
 console.log(handTotal)
 return handTotal
-
-
 }
-
 
 function hit() {
   playerHand.push(cardDeck.pop())
-  console.log(playerHand)
-  countHands(playerHand)
-
+  
+  if(countHands(playerHand) > 21) {
+    statusMsg.textContent = "Player BUSTS! Dealer Wins"
+  }
 }
 
 function stand() {
+  while(countHands(dealerHand) < 17) {
+    dealerHand.push(cardDeck.pop())
+    console.log(dealerHand)
+}
+if (countHands(dealerHand) > 21) {
+  statusMsg.textContent = "Dealer BUSTS! Player Wins"
+}
 
 }
