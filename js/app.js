@@ -35,11 +35,14 @@ function init() {
 
 
 function playGame() {
+  gameWinner = false
+  init()
   shuffleCards(cardDeck)
+  playerHand = []
+  dealerHand = []
   dealCards()
-  countHands(playerHand)
-  countHands(dealerHand)
-}
+  checkBlackjack(countHands(playerHand), countHands(dealerHand))
+  }
 
 
 function shuffleCards(arr){
@@ -75,7 +78,7 @@ function cardValues(card) {
   let value
   
   if (ace.includes(card)) {
-    value = 1 ?? 11
+    value = 11
   }
   if (pictureCard.includes(card)) {
     value = 10
@@ -142,5 +145,16 @@ else if(countHands(dealerHand) === countHands(playerHand)) {
 else {
   statusMsg.textContent = "Player WINS!"
 }
+}
 
+function checkBlackjack(pHand, dHand) {
+  if(pHand === 21 && dHand === 21){
+    statusMsg.textContent = "Both BJ! Its a Push"
+  }
+else if (pHand === 21) {
+  statusMsg.textContent = "BLACKJACK! PLAYER WINS"
+}
+else if(dHand === 21) {
+  statusMsg.textContent = "dealer has BJ! Dealer Win"
+}
 }
