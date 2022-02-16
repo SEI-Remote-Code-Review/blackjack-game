@@ -21,10 +21,6 @@ const statusMsg = document.querySelector('.game-status')
 const playerInfo = document.querySelector('.playersInfo')
 const dealerInfo = document.querySelector('.dealersInfo')
 
-const dealerCard1 = document.getElementById('dcard1')
-const dealerCard2 = document.getElementById('dcard2')
-const playerCard1 = document.getElementById('pcard1')
-const playerCard2 = document.getElementById('pcard2')
 
 
 /*----------------------------- Event Listeners ----------------------------*/
@@ -70,20 +66,10 @@ function dealCards() {
   console.log(cardDeck)
 }
 
-// function renderCards() {
-//   playerCard1.className = `card large ${playerHand[0]}` 
-//   playerCard2.className = `card large ${playerHand[1]}` 
-//   dealerCard1.className = `card large ${dealerHand[0]}`
-//   dealerCard2.className = `card large ${dealerHand[1]}`  
-// }
-
 
 function renderCards() {
-  playerCard1.style.display = "none"
-  playerCard2.style.display = "none"
-  dealerCard1.style.display = "none"
-  dealerCard2.style.display = "none"
-  
+  playerInfo.innerHTML = ""
+  dealerInfo.innerHTML = ""
   for(i= 0; i< playerHand.length; i++) {
     let card = document.createElement("div")
     card.className = `card large ${playerHand[i]}`
@@ -158,6 +144,7 @@ return handTotal
 
 function hit() {
   playerHand.push(cardDeck.pop())
+  renderCards()
   
   if(countHands(playerHand) > 21) {
     statusMsg.textContent = "Player BUSTS! Dealer Wins"
@@ -167,7 +154,7 @@ function hit() {
 function stand() {
   while(countHands(dealerHand) < 17) {
     dealerHand.push(cardDeck.pop())
-    console.log(dealerHand)
+    renderCards()
 }
 if (countHands(dealerHand) > 21) {
   statusMsg.textContent = "Dealer BUSTS! Player Wins"
