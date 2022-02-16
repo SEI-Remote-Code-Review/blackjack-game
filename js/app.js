@@ -18,8 +18,16 @@ const playbtn = document.getElementById('play-btn')
 const hitbtn = document.getElementById('hit-btn')
 const standbtn = document.getElementById('stand-btn')
 const statusMsg = document.querySelector('.game-status')
+const playerInfo = document.querySelector('.playersInfo')
+const dealerInfo = document.querySelector('.dealersInfo')
 
-/*----------------------------- Event Listeners -----------------------------*/
+const dealerCard1 = document.getElementById('dcard1')
+const dealerCard2 = document.getElementById('dcard2')
+const playerCard1 = document.getElementById('pcard1')
+const playerCard2 = document.getElementById('pcard2')
+
+
+/*----------------------------- Event Listeners ----------------------------*/
 playbtn.addEventListener('click', playGame)
 hitbtn.addEventListener('click', hit)
 standbtn.addEventListener('click', stand)
@@ -41,6 +49,7 @@ function playGame() {
   playerHand = []
   dealerHand = []
   dealCards()
+  renderCards()
   checkBlackjack(countHands(playerHand), countHands(dealerHand))
   }
 
@@ -60,6 +69,33 @@ function dealCards() {
   console.log(playerHand, dealerHand)
   console.log(cardDeck)
 }
+
+// function renderCards() {
+//   playerCard1.className = `card large ${playerHand[0]}` 
+//   playerCard2.className = `card large ${playerHand[1]}` 
+//   dealerCard1.className = `card large ${dealerHand[0]}`
+//   dealerCard2.className = `card large ${dealerHand[1]}`  
+// }
+
+
+function renderCards() {
+  playerCard1.style.display = "none"
+  playerCard2.style.display = "none"
+  dealerCard1.style.display = "none"
+  dealerCard2.style.display = "none"
+  
+  for(i= 0; i< playerHand.length; i++) {
+    let card = document.createElement("div")
+    card.className = `card large ${playerHand[i]}`
+    playerInfo.appendChild(card)
+  }
+  for(i = 0; i < dealerHand.length; i++) {
+    let card = document.createElement("div")
+    card.className = `card large ${dealerHand[i]}`
+    dealerInfo.appendChild(card)
+  }
+}
+
 
 
 
