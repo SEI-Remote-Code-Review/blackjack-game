@@ -64,7 +64,7 @@ let ace = ["dA", "hA", "cA", "sA"]
 let pictureCard = ["dK", "dQ", "dJ", "d10", "hK", "hQ", "hJ", "h10", "cK", "cQ", "cJ", "c10", "sK", "sQ", "sJ", "s10" ]
 let nineSuits = ["d09", "h09", "c09", "s09"]
 let eightSuits = ["d08", "h08", "c08", "s08"]
-let sevenSuits = ["d07", "h07", "c07", "s08"]
+let sevenSuits = ["d07", "h07", "c07", "s07"]
 let sixSuits = ["d06", "h06", "c06", "s06"]
 let fiveSuits = ["d05", "h05", "c05", "s05"]
 let fourSuits = ["d04", "h04", "c04", "s04"]
@@ -132,6 +132,15 @@ function stand() {
 }
 if (countHands(dealerHand) > 21) {
   statusMsg.textContent = "Dealer BUSTS! Player Wins"
+}
+else if(countHands(dealerHand) > countHands(playerHand)) {
+  statusMsg.textContent = "Dealer Wins!"
+}
+else if(countHands(dealerHand) === countHands(playerHand)) {
+  statusMsg.textContent = "It's a PUSH!"
+}
+else {
+  statusMsg.textContent = "Player WINS!"
 }
 
 }
