@@ -55,9 +55,14 @@ function shuffleCards(arr){
 }
 
 function dealCards() {
-  playerHand = [cardDeck.shift(), cardDeck.shift()]
-  dealerHand = [cardDeck.shift(), cardDeck.shift()]
+  playerHand.push(cardDeck.pop())
+  dealerHand.push(cardDeck.pop())
+  playerHand.push(cardDeck.pop())
+  dealerHand.push(cardDeck.pop())
+  console.log(playerHand, dealerHand)
+  console.log(cardDeck)
 }
+
 
 
 let ace = ["dA", "hA", "cA", "sA"]
@@ -74,34 +79,34 @@ let twoSuits = ["d02", "h02", "c02", "s02"]
 function cardValues(card) {
   let value
   
-  if (card = 'ace') {
+  if (ace.includes(card)) {
     value = 1 ?? 11
   }
-  if (card = 'pictureCard') {
+  if (pictureCard.includes(card)) {
     value = 10
   }
-  if (card = 'nineSuits') {
+  if (nineSuits.includes(card)) {
     value = 9
   }
-  if (card = 'eightSuits') {
+  if (eightSuits.includes(card)) {
     value = 8
   }
-  if (card = 'sevenSuits') {
+  if (sevenSuits.includes(card)) {
     value = 7
   }
-  if (card = 'sixSuits') {
+  if (sixSuits.includes(card)) {
     value = 6
   }
-  if (card = 'fiveSuits') {
+  if (fiveSuits.includes(card)) {
     value = 5
   }
-  if (card = 'fourSuits') {
+  if (fourSuits.includes(card)) {
     value = 4
   }
-  if (card = 'threeSuits') {
+  if (threeSuits.includes(card)) {
     value = 3
   }
-  if (card = 'twoSuits') {
+  if (twoSuits.includes(card)) {
     value = 2
   }
   return value 
