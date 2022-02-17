@@ -17,7 +17,6 @@ const dealerHandValueEl = document.getElementById('dealer-value')
 const playbtn = document.getElementById('play-btn')
 const hitbtn = document.getElementById('hit-btn')
 const standbtn = document.getElementById('stand-btn')
-const resetbtn = document.getElementById('reset-btn')
 const statusMsg = document.querySelector('.game-status')
 const playerInfo = document.querySelector('.playersInfo')
 const dealerInfo = document.querySelector('.dealersInfo')
@@ -28,7 +27,6 @@ const dealerInfo = document.querySelector('.dealersInfo')
 playbtn.addEventListener('click', playGame)
 hitbtn.addEventListener('click', hit)
 standbtn.addEventListener('click', stand)
-resetbtn.addEventListener('click', resetGame)
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -47,28 +45,29 @@ function playGame() {
   playerHand = []
   dealerHand = []
   dealCards()
+  hitbtn.disabled = false
+  standbtn.disabled = false
   renderCards()
   checkBlackjack(countHands(playerHand), countHands(dealerHand))
   }
 
-  function resetGame () {
-    gameWinner = false
-    playerHand = []
-    dealerHand = []
+//   function checkWinner () {
+//     if(gameWinner = true) 
 
-    for(i = 0; i < 2; i++) {
 
-    let card = document.createElement("div")
-    card.className = "card large back-red"
-    playerInfo.appendChild(card)
-  }
-    for(i = 0; i < 2; i++) {
+//     for(i = 0; i < 2; i++) {
 
-    let card = document.createElement("div")
-    card.className = "card large back-red"
-    dealerInfo.appendChild(card)
-  }
-}
+//     let card = document.createElement("div")
+//     card.className = "card large back-red"
+//     playerInfo.appendChild(card)
+//   }
+//     for(i = 0; i < 2; i++) {
+
+//     let card = document.createElement("div")
+//     card.className = "card large back-red"
+//     dealerInfo.appendChild(card)
+//   }
+// }
 
 
 function shuffleCards(arr){
