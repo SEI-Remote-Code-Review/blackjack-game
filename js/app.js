@@ -20,6 +20,7 @@ const standbtn = document.getElementById('stand-btn')
 const statusMsg = document.querySelector('.game-status')
 const playerInfo = document.querySelector('.playersInfo')
 const dealerInfo = document.querySelector('.dealersInfo')
+const dealerTotal = document.querySelector('.dealerTotal')
 
 
 
@@ -93,12 +94,12 @@ function renderCards() {
   dealerInfo.innerHTML = ""
   for(i= 0; i< playerHand.length; i++) {
     let card = document.createElement("div")
-    card.className = `card large ${playerHand[i]}`
+    card.className = `card xlarge ${playerHand[i]}`
     playerInfo.appendChild(card)
   }
   for(i = 0; i < dealerHand.length; i++) {
     let card = document.createElement("div")
-    card.className = `card large ${dealerHand[i]}`
+    card.className = `card xlarge ${dealerHand[i]}`
     dealerInfo.appendChild(card)
   }
 }
@@ -197,12 +198,12 @@ else {
 
 function checkBlackjack(pHand, dHand) {
   if(pHand === 21 && dHand === 21){
-    statusMsg.textContent = "Both BJ! Its a Push"
+    statusMsg.textContent = "Both have BlackJack! Its a Push"
   }
 else if (pHand === 21) {
   statusMsg.textContent = "BLACKJACK! PLAYER WINS"
 }
 else if(dHand === 21) {
-  statusMsg.textContent = "dealer has BJ! Dealer Win"
+  statusMsg.textContent = "Dealer has BlackJack! Dealer Win"
 }
 }
