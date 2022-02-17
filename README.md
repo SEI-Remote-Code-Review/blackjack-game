@@ -19,4 +19,17 @@ Play Here: https://charlesjbasedow.github.io/blackjack-game/
 
 ## Screenshot
 
-![Blackjack State](/home/charlesjbasedow/code/sei/projects/blackjack-game/Screenshot 2022-02-17 132935.png)
+![Blackjack State](/home/charlesjbasedow/code/sei/projects/blackjack-game/screenshotbj.png)
+
+## Wireframe
+
+![Wireframe](/home/charlesjbasedow/code/sei/projects/blackjack-game/wireframebj.png)
+
+## Credits
+- CSS Card Deck: General Assembly
+
+## Stretch Goals
+- Add bet functionality
+- Have the cards partially lap over one another
+- Add split and double down buttons
+
