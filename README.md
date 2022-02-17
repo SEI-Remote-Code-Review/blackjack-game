@@ -19,11 +19,11 @@ Play Here: https://charlesjbasedow.github.io/blackjack-game/
 
 ## Screenshot
 
-![Blackjack State](/home/charlesjbasedow/code/sei/projects/blackjack-game/screenshotbj.png)
+![Blackjack State](screenshotbj.png)
 
 ## Wireframe
 
-![Wireframe](/home/charlesjbasedow/code/sei/projects/blackjack-game/wireframebj.png)
+![Wireframe](wireframebj.png)
 
 ## Credits
 - CSS Card Deck: General Assembly
