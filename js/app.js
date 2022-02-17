@@ -39,6 +39,7 @@ function init() {
 
 
 function playGame() {
+  statusMsg.textContent = ''
   gameWinner = false
   init()
   shuffleCards(cardDeck)
