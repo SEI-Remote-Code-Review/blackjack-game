@@ -16,8 +16,15 @@ h2 {
   color: ghostwhite;
 }
 
+.dealersInfo {
+  height: 75vh;
+}
+
+.playersInfo {
+  height: 80vh;
+}
 .card {
-  margin: 1vh;
+  margin: 0.5vh;
 }
 
 .card.outline {
@@ -29,10 +36,18 @@ h2 {
 }
 
 .btn {
-  margin-top: 4vh;
+  width: 10vh;
   color: #ffffff;
   background-color: rgb(255, 20, 20);
   font-weight: bold;
   border: 2px solid #ffffff;
 }
+/* .btn {
+  
+  color: #ffffff;
+  background-color: rgb(255, 20, 20);
+  font-weight: bold;
+  border: 2px solid #ffffff;
+} */
+
 

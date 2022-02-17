@@ -53,24 +53,6 @@ function playGame() {
   checkBlackjack(countHands(playerHand), countHands(dealerHand))
   }
 
-//   function checkWinner () {
-//     if(gameWinner = true) 
-
-
-//     for(i = 0; i < 2; i++) {
-
-//     let card = document.createElement("div")
-//     card.className = "card large back-red"
-//     playerInfo.appendChild(card)
-//   }
-//     for(i = 0; i < 2; i++) {
-
-//     let card = document.createElement("div")
-//     card.className = "card large back-red"
-//     dealerInfo.appendChild(card)
-//   }
-// }
-
 
 function shuffleCards(arr){
   for(var i =arr.length-1 ; i>0 ;i--){
@@ -102,6 +84,8 @@ function renderCards() {
     card.className = `card xlarge ${dealerHand[i]}`
     dealerInfo.appendChild(card)
   }
+  hitbtn.style.display = "inline"
+  standbtn.style.display = "inline"
 }
 
 
@@ -169,19 +153,21 @@ function hit() {
   
   if(countHands(playerHand) > 21) {
     statusMsg.textContent = "Player BUSTS! Dealer Wins"
-    hitbtn.disabled = true
-    standbtn.disabled = true
+    hitbtn.style.display = "none"
+    standbtn.style.display = "none"
   }
 }
 
 function stand() {
-  hitbtn.disabled = true
-  standbtn.disabled = true
+
   
   while(countHands(dealerHand) < 17) {
     dealerHand.push(cardDeck.pop())
     renderCards()
 }
+  hitbtn.style.display = "none"
+  standbtn.style.display = "none"
+
 if (countHands(dealerHand) > 21) {
   statusMsg.textContent = "Dealer BUSTS! Player Wins"
 }
