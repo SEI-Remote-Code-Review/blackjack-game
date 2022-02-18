@@ -84,8 +84,8 @@ function renderCards() {
     card.className = `card xlarge ${dealerHand[i]}`
     dealerInfo.appendChild(card)
   }
-  hitbtn.style.display = "inline"
-  standbtn.style.display = "inline"
+  hitbtn.style.visibility = "visible"
+  standbtn.style.visibility = "visible"
 }
 
 
@@ -153,26 +153,24 @@ function hit() {
   
   if(countHands(playerHand) > 21) {
     statusMsg.textContent = "Player BUSTS! Dealer Wins"
-    hitbtn.style.display = "none"
-    standbtn.style.display = "none"
+    hitbtn.style.visibility = "hidden"
+    standbtn.style.visibility = "hidden"
   }
 }
 
 function stand() {
-
-  
   while(countHands(dealerHand) < 17) {
     dealerHand.push(cardDeck.pop())
     renderCards()
 }
-  hitbtn.style.display = "none"
-  standbtn.style.display = "none"
+  hitbtn.style.visibility = "hidden"
+  standbtn.style.visibility = "hidden"
 
 if (countHands(dealerHand) > 21) {
   statusMsg.textContent = "Dealer BUSTS! Player Wins"
 }
 else if(countHands(dealerHand) > countHands(playerHand)) {
-  statusMsg.textContent = "Dealer Wins!"
+  statusMsg.textContent = "Dealer WINS!"
 }
 else if(countHands(dealerHand) === countHands(playerHand)) {
   statusMsg.textContent = "It's a PUSH!"
@@ -185,11 +183,17 @@ else {
 function checkBlackjack(pHand, dHand) {
   if(pHand === 21 && dHand === 21){
     statusMsg.textContent = "Both have BlackJack! Its a Push"
+    hitbtn.style.visibility = "hidden"
+    standbtn.style.visibility = "hidden"
   }
 else if (pHand === 21) {
   statusMsg.textContent = "BLACKJACK! PLAYER WINS"
+  hitbtn.style.visibility = "hidden"
+  standbtn.style.visibility = "hidden"
 }
 else if(dHand === 21) {
   statusMsg.textContent = "Dealer has BlackJack! Dealer Win"
+  hitbtn.style.visibility = "hidden"
+    standbtn.style.visibility = "hidden"
 }
 }
