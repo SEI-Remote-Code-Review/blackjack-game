@@ -32,8 +32,8 @@ const standbtn = document.getElementById('stand-btn')
 const statusMsg = document.querySelector('.game-status')
 const playerInfo = document.querySelector('.playersInfo')
 const dealerInfo = document.querySelector('.dealersInfo')
-const dealerTotal = document.querySelector('.dealerTotal')
-
+const dealerTotal = document.getElementById('dealerTotal')
+const playerTotal = document.getElementById('playerTotal')
 
 
 /*----------------------------- Event Listeners ----------------------------*/
@@ -143,12 +143,13 @@ function countHands(hand) {
   for (let i = 0; i< hand.length; i++) {
     handTotal = handTotal + cardValues(hand[i])
 }
-return handTotal
+  return handTotal
 }
 
 function hit() {
   playerHand.push(cardDeck.pop())
   renderCards()
+  playerTotal.textContent = countHands(playerHand)
   
   if(countHands(playerHand) > 21) {
     statusMsg.textContent = "Player BUSTS! Dealer Wins"
@@ -161,6 +162,7 @@ function stand() {
   while(countHands(dealerHand) < 17) {
     dealerHand.push(cardDeck.pop())
     renderCards()
+    dealerTotal.textContent = countHands(dealerHand)
 }
   hitbtn.style.visibility = "hidden"
   standbtn.style.visibility = "hidden"
@@ -195,4 +197,6 @@ else if(dHand === 21) {
   hitbtn.style.visibility = "hidden"
   standbtn.style.visibility = "hidden"
 }
+  playerTotal.textContent = countHands(playerHand)
+  dealerTotal.textContent = countHands(dealerHand)
 }

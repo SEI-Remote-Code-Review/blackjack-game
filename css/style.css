@@ -64,13 +64,16 @@ h2 {
   border: 1px solid ghostwhite(255, 20, 20);
   font-size: 26px;
   width: 120px;
-  }
-/* .btn {
-  
-  color: #ffffff;
-  background-color: rgb(255, 20, 20);
-  font-weight: bold;
-  border: 2px solid #ffffff;
-} */
+}
 
+#playerTotal {
+  color: ghostwhite;
+  font-size: 1.6rem;
+  height: 25vh;
+}
+
+#dealerTotal {
+  color: ghostwhite;
+  font-size: 1.6rem;
+}
 

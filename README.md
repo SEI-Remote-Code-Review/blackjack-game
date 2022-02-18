@@ -19,9 +19,9 @@ Play Here: https://charlesjbasedow.github.io/blackjack-game/
 
 ## Screenshots
 
-![Blackjack State](images/blackjackss.png)
+![Blackjack State](images/blackjackssrme.png)
 
-![Hit Stand Buttons](images/blackjackhitstndss.png)
+![Hit Stand Buttons](images/bjhitstandbtnsrme.png)
 
 ## Wireframe
 
@@ -32,7 +32,7 @@ Play Here: https://charlesjbasedow.github.io/blackjack-game/
 
 ## Stretch Goals
 - Have one of dealer cards hidden until player finishes turn
-- Add score total for each card hand
+- Add ace value 1 or 11
 - Add bet functionality
 - Animate the dealing/drawing of cards
 - Have the cards partially lap over one another
