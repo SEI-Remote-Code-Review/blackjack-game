@@ -25,7 +25,7 @@ Play Here: https://charlesjbasedow.github.io/blackjack-game/
 
 ## Wireframe
 
-![Wireframe](wireframebj.png)
+![Wireframe](images/wireframebj.png)
 
 ## Credits
 - CSS Card Deck: General Assembly
