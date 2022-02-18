@@ -19,7 +19,9 @@ Play Here: https://charlesjbasedow.github.io/blackjack-game/
 
 ## Screenshot
 
-![Blackjack State](screenshotbj.png)
+![Blackjack State](images/blackjackss.png)
+
+![Hit Stand Buttons](images/blackjackhitstndss.png)
 
 ## Wireframe
 
