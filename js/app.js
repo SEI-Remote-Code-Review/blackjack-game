@@ -1,5 +1,17 @@
 /*-------------------------------- Constants --------------------------------*/
 
+let ace = ["dA", "hA", "cA", "sA"]
+let pictureCard = ["dK", "dQ", "dJ", "d10", "hK", "hQ", "hJ", "h10", "cK", "cQ", "cJ", "c10", "sK", "sQ", "sJ", "s10" ]
+let nineSuits = ["d09", "h09", "c09", "s09"]
+let eightSuits = ["d08", "h08", "c08", "s08"]
+let sevenSuits = ["d07", "h07", "c07", "s07"]
+let sixSuits = ["d06", "h06", "c06", "s06"]
+let fiveSuits = ["d05", "h05", "c05", "s05"]
+let fourSuits = ["d04", "h04", "c04", "s04"]
+let threeSuits = ["d03", "h03", "c03", "s03"]
+let twoSuits = ["d02", "h02", "c02", "s02"]
+
+
 /*---------------------------- Variables (state) ----------------------------*/
 let cardDeck = []
 let playerHand = []
@@ -51,7 +63,7 @@ function playGame() {
   standbtn.disabled = false
   renderCards()
   checkBlackjack(countHands(playerHand), countHands(dealerHand))
-  }
+}
 
 
 function shuffleCards(arr){
@@ -88,19 +100,6 @@ function renderCards() {
   standbtn.style.visibility = "visible"
 }
 
-
-
-
-let ace = ["dA", "hA", "cA", "sA"]
-let pictureCard = ["dK", "dQ", "dJ", "d10", "hK", "hQ", "hJ", "h10", "cK", "cQ", "cJ", "c10", "sK", "sQ", "sJ", "s10" ]
-let nineSuits = ["d09", "h09", "c09", "s09"]
-let eightSuits = ["d08", "h08", "c08", "s08"]
-let sevenSuits = ["d07", "h07", "c07", "s07"]
-let sixSuits = ["d06", "h06", "c06", "s06"]
-let fiveSuits = ["d05", "h05", "c05", "s05"]
-let fourSuits = ["d04", "h04", "c04", "s04"]
-let threeSuits = ["d03", "h03", "c03", "s03"]
-let twoSuits = ["d02", "h02", "c02", "s02"]
 
 function cardValues(card) {
   let value
@@ -167,7 +166,7 @@ function stand() {
   standbtn.style.visibility = "hidden"
 
 if (countHands(dealerHand) > 21) {
-  statusMsg.textContent = "Dealer BUSTS! Player Wins"
+  statusMsg.textContent = "Dealer Busts! Player WINS"
 }
 else if(countHands(dealerHand) > countHands(playerHand)) {
   statusMsg.textContent = "Dealer WINS!"
@@ -182,7 +181,7 @@ else {
 
 function checkBlackjack(pHand, dHand) {
   if(pHand === 21 && dHand === 21){
-    statusMsg.textContent = "Both have BlackJack! Its a Push"
+    statusMsg.textContent = "Both have BlackJack! Its a PUSH"
     hitbtn.style.visibility = "hidden"
     standbtn.style.visibility = "hidden"
   }
@@ -192,8 +191,8 @@ else if (pHand === 21) {
   standbtn.style.visibility = "hidden"
 }
 else if(dHand === 21) {
-  statusMsg.textContent = "Dealer has BlackJack! Dealer Win"
+  statusMsg.textContent = "Dealer has BlackJack! Dealer WINS"
   hitbtn.style.visibility = "hidden"
-    standbtn.style.visibility = "hidden"
+  standbtn.style.visibility = "hidden"
 }
 }

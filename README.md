@@ -29,7 +29,9 @@ Play Here: https://charlesjbasedow.github.io/blackjack-game/
 - CSS Card Deck: General Assembly
 
 ## Stretch Goals
+- Have one of dealer cards hidden until player finishes turn
 - Add bet functionality
+- Animate the dealing/drawing of cards
 - Have the cards partially lap over one another
 - Add split and double down buttons
-
+- Enhance the table with CSS
