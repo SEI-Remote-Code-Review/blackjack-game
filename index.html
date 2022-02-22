@@ -4,10 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <script defer src="./js/app.js"></script>
+  <link href="./css/cardstarter.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <title>Single Handed Blackjack!</title>
 </head>
 <body>
+  <h1>Welcome to Blackjack</h1>
+  
+  <h2 class="game-status" id="msg"></h2>
+  <div id="dealerTotal"></div>
+  
+  <div class="dealersInfo">
+    <div class="card xlarge back-red"></div>
+		<div class="card xlarge back-red"></div>
+  </div>
+  <div>
+    <button id="play-btn" class="btn">PLAY</button>
+  </div>
+  <div class="hitstand-btns">
+    <button id="hit-btn" class="btn">HIT</button>
+    <button id="stand-btn" class="btn">STAND</button>
+    
+  </div>
+
+  <div class="playersInfo">
+    <div class="card xlarge back-red"></div>
+		<div class="card xlarge back-red"></div>
+  </div>
+  <div id = "playerTotal"></div>
 </body>
 </html>
